@@ -2,6 +2,9 @@
 
 By Finian Lugtigheid
 
+[Github](https://github.com/Slow-Swift/cmpt_461_assignment_7)
+[Github Pages](https://slow-swift.github.io/task2/solar_system.html)
+
 ## Tasks
 ### Task 1
 - Exercise 1: I changed the text to: Finian Lugtigheid in CMPT 461
