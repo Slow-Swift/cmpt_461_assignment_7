@@ -3,7 +3,8 @@
 By Finian Lugtigheid
 
 [Github](https://github.com/Slow-Swift/cmpt_461_assignment_7)
-[Github Pages](https://slow-swift.github.io/task2/solar_system.html)
+[Github Pages](https://slow-swift.github.io/cmpt_461_assignment_7/)
+
 
 ## Tasks
 ### Task 1
