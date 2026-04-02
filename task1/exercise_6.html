@@ -1,0 +1,56 @@
+<html>
+  <head>
+    <script src="https://aframe.io/releases/1.7.1/aframe.min.js"></script>
+  </head>
+  <body>
+	<script>
+      document.addEventListener('DOMContentLoaded', () => {
+          const isLocal = ['localhost','127.0.0.1','[::1]'].includes(location.hostname);
+          const src = './Images/mars-surface.avif';
+
+          const img = document.getElementById('mars');
+          img.setAttribute('src', src);        // set it
+
+          // once assets are ready, use it
+          document.querySelector('a-assets').addEventListener('loaded', () => {
+            document.getElementById('mySky')
+              .setAttribute('material', 'src: #mars');
+          });
+        });
+    </script>
+
+    <a-scene>
+		<a-assets>
+			<img id="mars" crossorigin="anonymous">
+		</a-assets>	
+		<!-- <a-sphere 
+			position="0 2 -5.5" 
+			src="#mars" 
+			rotation="0 0 0" 
+			animation="property: rotation; to: 0 -360 0; loop: true; dur:2000">
+		</a-sphere> -->
+
+		<!-- <a-sphere  id="PGB sphere" position="0 2 -1.5" radius="1" rotation="0 0 0" color="blue"></a-sphere> -->
+		<a-sphere  
+			id="PGB sphere" 
+			src="#mars"
+			radius="0.5"
+			position="0 2 -5.5" 
+			transparent="false"
+			rotation="0 0 0" color="#FFCCCB"
+			animation="property: rotation; to: 0 -360 0; easing: linear; loop: true; dur:5000"> 
+		</a-sphere>
+							 
+		<a-box	id="PGB Box" 
+				position="0 2 -5.5"
+				rotation="58 45 45"
+				transparent="true"
+				
+				blending="additive"
+				color="#11CCCB"></a-box>
+							 
+    </a-scene>
+  </body>
+</html>
+
+<!-- "additive" subtractive none multiply normal -->

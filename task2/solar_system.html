@@ -1,0 +1,69 @@
+
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Orbiting and Spinning Sphere in A-Frame</title>
+    <script src="https://aframe.io/releases/1.7.1/aframe.min.js"></script>
+  </head>
+  <body>
+  <!-- <script src="../js/aframe.min.js"></script> -->
+  <!-- material="color: red" -->
+    <a-scene>
+    
+	  <a-assets>
+      <img id="sun" src="./images/sunmap.jpg">
+      <img id="venus" src="./images/venusmap.jpg">
+      <img id="earth" src="./images/earthmap1k.jpg">
+      <img id="mars" src="./images/mars_1k_color.jpg">
+      <img id="jupiter" src="./images/jupiter2_1k.jpg">
+      <img id="stars" src="./images/stars.png">
+	  </a-assets>
+      <a-sky id="mySky"
+          src="#stars"	position="0  0 0"
+        ></a-sky>	  
+
+      <a-entity position="0 -5 -15">
+          <!-- Sun -->
+      <a-sphere scale="5 5 5" geometry="primitive: sphere" src="#sun" position="0 0 0" 
+        animation="property: rotation; to: 0 360 0; easing: linear; loop: true; dur: 10000"></a-sphere>
+          
+      <!-- Venus -->
+      <a-entity
+        animation="property: rotation; to: 0 360 0; easing: linear; loop: true; dur: 10000"
+        >
+        <a-sphere id="venus" scale = "0.9 0.9 0.9" geometry="primitive: sphere" src="#venus" position="10 0 0" 
+        animation="property: rotation; to: 0 360 0; easing: linear; loop: true; dur: 5000"></a-sphere>
+      </a-entity>
+
+      <!-- Earth -->
+      <a-entity
+        animation="property: rotation; to: 0 360 0; easing: linear; loop: true; dur: 15000"
+        >
+        <a-sphere id="earth" geometry="primitive: sphere" src="#earth" position="15 0 0" 
+        animation="property: rotation; to: 0 360 0; easing: linear; loop: true; dur: 1000"></a-sphere>
+      </a-entity>
+
+      <!-- Mars -->
+      <a-entity
+        animation="property: rotation; to: 0 360 0; easing: linear; loop: true; dur: 27000"
+        >
+        <a-sphere id="mars" scale="0.6 0.6 0.6" geometry="primitive: sphere" src="#mars" position="20 0 0" 
+        animation="property: rotation; to: 0 360 0; easing: linear; loop: true; dur: 1000"></a-sphere>
+      </a-entity>
+
+      <!-- Jupiter -->
+      <a-entity
+        animation="property: rotation; to: 0 360 0; easing: linear; loop: true; dur: 40000"
+        >
+        <a-sphere scale="3 3 3" id="jupiter" geometry="primitive: sphere" src="#jupiter" position="25 0 0" 
+        animation="property: rotation; to: 0 360 0; easing: linear; loop: true; dur: 4000"></a-sphere>
+      </a-entity>
+      </a-entity>
+      
+      <!-- Camera and Lighting -->
+      <a-camera position="0 0 0"></a-camera>
+      <a-light type="ambient" color="#888"></a-light>
+      <a-light type="directional" color="#fff" position="-1 1 1"></a-light>
+    </a-scene>
+  </body>
+</html>
